@@ -1,0 +1,27 @@
+#!/bin/bash
+#Script to clear orphaned packages and paccache
+
+echo -e "Clean orphans or paccache?\n 1) Orphans\n 2) Paccache\n 3) Quit\n"
+read choice
+if [ $choice -eq 1 ] ; then
+		echo -e "Displaying Orphans... \n\n"
+		pacman -Qqdt
+		echo -e "Are you sure you want to delete? [Y/n]"
+		read confirm
+		if [ "$confirm" = "n" ] ; then
+			echo -e "Quitting Script.\n"
+			exit 0
+		else
+			echo -e "Deleting Orphans\n"
+			sudo pacman -R $(pacman -Qqdt)
+			echo -e "Done. Quitting Script.\n"
+			exit 0
+		fi
+elif [ $choice -eq 2 ] ; then
+		echo -e "Deleting all but last 3 cached versions.\n"
+		paccache -ruk0
+		echo -e "Done. Quitting Script.\n"
+		exit 0		
+else
+		exit 0
+fi

@@ -42,3 +42,24 @@ The following command will create a file called sample.html, and send its output
 ```
 $ htmlinit >> sample.html
 ```
+
+## PacClean
+
+### File Name: pacclean
+
+### Function
+
+Allows the user to remove any orphaned packages from the system as well as clear the pacman cache.
+
+### Usage
+Upon running the script you will be greeted with a prompt
+```
+Clean orphans or paccache?
+1) Orphans
+2) Paccache
+3) Quit
+```
+Selecting orphans will list all orphaned packages and will then ask for a confirmation to delete them
+Selecting paccache will delete all but the last three versions of all packages
+and will also delete all cached versions of uninstalled packages
+

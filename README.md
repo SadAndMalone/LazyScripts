@@ -2,6 +2,19 @@
 
 This will one day contain all of the scripts that I use to make mundane tasks easier.
 
+## How to Use These Scripts
+
+Clone the repository (or don't you can just download the files individually).
+Move the file into a directory that is in your $PATH.
+```
+$ echo $PATH
+```
+If you want to create a special directory for these (I'll use bin in the example)
+```
+$ export PATH=$PATH:bin
+```
+The script can now be run from anywhere by just typing the name of the script.
+
 ## HTML Skeleton
 
 ### File Name: htmlinit

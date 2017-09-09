@@ -1,0 +1,13 @@
+#!/bin/bash
+#Produces an HTML skeleton
+
+cat << _EOF_
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+_EOF_

@@ -11,9 +11,11 @@ $ echo $PATH
 ```
 If you want to create a special directory for these (I'll use bin in the example)
 ```
-$ export PATH=$PATH:bin
+$ export PATH=$PATH:/home/$USER/bin
 ```
 The script can now be run from anywhere by just typing the name of the script.
+
+Using adding the above command to ~/.bashrc will run it everytime you start.
 
 ## HTML Skeleton
 
